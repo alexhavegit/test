@@ -1,11 +1,26 @@
 ﻿// test.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-#include <iostream>
+//#include <iostream>
+#include <stdio.h>
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    //printf("Hello \n");
+
+    double number = 1.00000001;
+    double result = 1;
+
+    //1,00000001
+
+    for (int i = 0; i < 100000000; i++)
+    {
+        result *= number;
+    }
+
+
+    printf("e = %.*f\n", 55, result);
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
